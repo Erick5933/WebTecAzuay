@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipo - Reforestación</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      
+     
+        .section {
+            padding: 20px;
+        }
+        .team-group {
+            margin-bottom: 30px;
+        }
+        .team-group h3 {
+            background-color: #388e3c;
+            color: white;
+            padding: 15px;
+            margin: 0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .team-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .team-list li {
+            background: white;
+            margin: 10px;
+            padding: 15px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+        .team-list li:hover {
+            background-color: #4F5B3A;
+            color: white;
+            transform: translateY(-5px);
+        }
+        .team-list .icon {
+            font-size: 24px;
+            color: #4F5B3A;
+        }
+        .team-list img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .team-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+       
+      
+      
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🌱 LLAKTA FOREST</div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyecto.html">Sobre el Proyecto</a></li>
+                <li><a href="equipo.html">Equipo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="section">
+        <h1><img src="logollakta.png" alt="Llakta Forest Logo" style="height: 60px;"> </h1>
+
+        <h2>Equipo de Desarrollo</h2>
+        <div id="team-container" class="team-container"></div>
+    </section>
+    
+    <script>
+        const teamMembers = {
+            "Backend": [
+                "Gilson Tenemea", "Anthony Fajardo", "Steven Carpio", "David Lopez", "Freddy Gomez", "Mariuxi Calle"
+            ],
+            "Frontend": [
+                "Victor Mendez", "Maura Calle", "Joel Pesantez", "Carmen Neira"
+            ],
+            "Móvil": [
+                "Erick Chacon", "Edwin Choez", "Adriana Cornejo", "Kenny Valdivieso", "Alexander Loja", "Wendy Llivichuzhca"
+            ]
+        };
+
+        const teamContainer = document.getElementById("team-container");
+        
+        Object.keys(teamMembers).forEach(group => {
+            const groupDiv = document.createElement("div");
+            groupDiv.classList.add("team-group");
+            
+            const title = document.createElement("h3");
+            title.innerHTML = `<img src="socios.png" alt="icono" style="width: 40px; height: 40px; margin-right: 10px;">${group}`;
+            groupDiv.appendChild(title);
+
+            const list = document.createElement("ul");
+            list.classList.add("team-list");
+            
+            teamMembers[group].forEach(member => {
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `<img src="usuario.png" alt="icono"> ${member}`;
+                list.appendChild(listItem);
+            });
+            
+            groupDiv.appendChild(list);
+            teamContainer.appendChild(groupDiv);
+        });
+    </script>
+
+
+<footer class="footer">
+    <p>© 2025 Tec Azuay - Desarrollo de Software</p>
+</footer>
+
+</body>
+</html>

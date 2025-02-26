@@ -1,0 +1,338 @@
+/* Estilos generales */ 
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #1a2a6c;
+    text-align: center;
+}
+
+h2 {
+    color: #004b87; /* Azul principal del logo */
+}
+
+/* Header */
+header {
+    background: #004b87;
+    padding: 15px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+    color: #ffd100; /* Amarillo del logo */
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    color: #ffd100;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--hover-color);
+}
+
+/* Hero */
+.hero {
+    background: url('TECAZUAY.png') center/cover no-repeat;
+    padding: 100px 20px;
+    color: #fff;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero .highlight {
+    color: #ffd100;
+    font-weight: bold;
+}
+
+.hero h1, .hero p {
+    margin-bottom: 20px;
+}
+
+
+.btn {
+    display: inline-block;
+    background: #004b87;
+    color: #ffd100;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Sección de razones - Corregir las imágenes */
+.why-study {
+    padding: 50px 20px;
+}
+
+.reasons {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.reason {
+    text-align: center;
+    flex: 1 1 30%; /* Establece el ancho del 30% en pantallas grandes */
+    max-width: 350px;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    width: 100%;
+    height: 200px; /* Ajusta la altura para que las imágenes tengan una altura uniforme */
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene las proporciones y recorta lo necesario */
+    object-position: center; /* Centra la imagen */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .reasons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reason {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .reason {
+        flex: 1 1 100%;
+    }
+}
+
+
+/* Testimonios */
+.testimonials {
+    background: #e8e8e8;
+    padding: 50px 20px;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    max-width: 300px;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* CTA */
+.cta {
+    background: #004b87;
+    color: #ffd100;
+    padding: 40px 20px;
+}
+
+.cta .btn {
+    background: #ffd100;
+    color: #004b87;
+    font-weight: bold;
+}
+
+/* Estilos para la sección "¿Por qué estudiar Desarrollo de Software?" */
+.why-study {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.why-study h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Contenedor de las razones */
+.reasons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Cada razón */
+.reason {
+    text-align: center;
+    flex: 1 1 30%;
+    max-width: 300px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reason:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor de imágenes */
+.image-container {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover en las imágenes */
+.reason:hover .image-container img {
+    transform: scale(1.1);
+}
+
+/* Títulos de cada razón */
+.reason h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Descripción de cada razón */
+.reason p {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .reasons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reason {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}
+/* Estilo para la sección de testimonios */
+.testimonials {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px);
+}
+
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.testimonial-quote {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.testimonial h4 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.testimonial-position {
+    font-size: 0.9rem;
+    color: #888;
+}

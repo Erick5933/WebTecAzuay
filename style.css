@@ -1,0 +1,237 @@
+/* VARIABLES */
+:root {
+    --primary-color: #68705a;
+    --secondary-color: #fbffed;
+    --accent-color: #a6b285;
+    --text-color: #747b4f;
+    --hover-color: #b4be9a;
+    --btn-color: #ffcc00;
+    --btn-hover: #e6b800;
+}
+
+
+/* ESTILOS GENERALES */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: var(--text-color);
+    text-align: center;
+}
+
+h2 {
+    color: var(--primary-color);
+}
+
+/* HEADER */
+header {
+    background: var(--primary-color);
+    padding: 15px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+    color: var(--btn-color);
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    color: var(--btn-color);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--hover-color);
+}
+
+/* HERO SECTION */
+.hero {
+    background: url('Fondo1.jpg') center/cover no-repeat;
+    padding: 100px 20px;
+    color: #fff;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h1, .hero p {
+    margin-bottom: 20px;
+}
+
+/* SECCIÓN GENERAL */
+.section {
+    padding: 50px 20px;
+}
+
+.problem-solution {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.workflow {
+    background-color: #eaf0e3;
+    padding: 60px 20px;
+}
+
+.workflow h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #2a6b34;
+}
+
+.workflow-steps {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.step {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    margin: 10px;
+}
+
+.step img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+
+.step h3 {
+    font-size: 20px;
+    color: #2a6b34;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* FOOTER */
+footer {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .menu {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .problem-solution {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .workflow-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .step {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+
+/* Estilos para la sección de problema y solución */
+.problem-solution {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.problem-box, .solution-box {
+    flex: 1 1 45%; /* Establece un tamaño flexible con un mínimo de 45% */
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.problem-box h2, .solution-box h2 {
+    font-size: 1.8rem;
+    color: #2d6a4f;
+    margin-bottom: 15px;
+}
+
+.problem-box p, .solution-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .problem-solution {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .problem-box, .solution-box {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}
+
